@@ -1,0 +1,122 @@
+[
+  {
+    "question": "What are the different routing algorithms?",
+    "ground_truth": "Routing algorithms are broadly classified into two main categories: 1) Static (or Non-Adaptive) algorithms, where routes are computed in advance offline (such as Shortest Path Routing using Dijkstra's algorithm and Flooding), and 2) Dynamic (or Adaptive) algorithms, where routes reflect frequent changes in network topology and traffic (such as Distance Vector Routing and Link-State Routing like OSPF).",
+    "category": "computer_networks",
+    "expected_route": "local"
+  },
+  {
+    "question": "What is the difference between TCP and UDP?",
+    "ground_truth": "TCP is a connection-oriented, reliable transport layer protocol that guarantees ordered packet delivery and uses flow and congestion control mechanisms. UDP is connectionless and unreliable, providing minimal overhead and faster transmission without packet delivery guarantees.",
+    "category": "computer_networks",
+    "expected_route": "local"
+  },
+  {
+    "question": "How does the CSMA/CD protocol handle collision detection in Ethernet?",
+    "ground_truth": "In CSMA/CD, a station listens to the medium while transmitting. If the medium is idle, it transmits; if busy, it waits until idle. If a collision is detected during transmission, the station immediately aborts transmission, sends a jam signal, and waits for a random backoff period before attempting retransmission.",
+    "category": "computer_networks",
+    "expected_route": "local"
+  },
+  {
+    "question": "What is the purpose of the Sliding Window protocol in Flow Control?",
+    "ground_truth": "The Sliding Window protocol is a flow control mechanism where the receiver grants a window size defining the upper bound on outstanding unacknowledged frames the transmitter may send, preventing buffer overflow at the receiver.",
+    "category": "computer_networks",
+    "expected_route": "local"
+  },
+  {
+    "question": "How does the Leaky Bucket algorithm manage traffic congestion?",
+    "ground_truth": "The Leaky Bucket algorithm shapes bursty traffic into a steady, constant-rate output. Incoming packets accumulate in a finite-capacity bucket and leak out at a constant predetermined rate; if the bucket overflows due to excessive bursts, incoming packets are discarded.",
+    "category": "computer_networks",
+    "expected_route": "local"
+  },
+  {
+    "question": "What is Bit Stuffing in the Data Link Layer and why is it used?",
+    "ground_truth": "Bit stuffing is a framing technique used for synchronization (such as in HDLC). Whenever five consecutive 1s appear in the payload data, a 0 is automatically inserted (stuffed) by the sender so the data pattern is never confused with the reserved flag pattern (01111110). The receiver detects five consecutive 1s followed by a 0 and removes (destuffs) the 0.",
+    "category": "computer_networks",
+    "expected_route": "local"
+  },
+  {
+    "question": "How does Cyclic Redundancy Check (CRC) perform error detection?",
+    "ground_truth": "CRC represents bit strings as polynomials with binary coefficients and uses modulo-2 arithmetic. A generator polynomial acts as a predetermined divisor; the sender divides the data bits by the generator polynomial, appends the remainder (checksum) to the frame, and the receiver verifies error-free transmission if division by the same generator polynomial yields zero.",
+    "category": "computer_networks",
+    "expected_route": "local"
+  },
+  {
+    "question": "What is the role of an Abstract Class and Pure Virtual Functions in C++?",
+    "ground_truth": "An abstract class is a base class designed solely for inheritance from which no direct instances can be created. It contains at least one pure virtual function (declared with '= 0'), which mandates that derived classes must provide an implementation for that function to become concrete.",
+    "category": "object_oriented_programming",
+    "expected_route": "local"
+  },
+  {
+    "question": "What is a Copy Constructor and when is it invoked in C++?",
+    "ground_truth": "A copy constructor is a special constructor that initializes a new object using an existing object of the same class (passed by reference). It is invoked when an object is initialized from another object, passed by value to a function, or returned by value from a function.",
+    "category": "object_oriented_programming",
+    "expected_route": "local"
+  },
+  {
+    "question": "What is the purpose of a Friend Function in C++?",
+    "ground_truth": "A friend function is a non-member function granted access to the private and protected members of a class. It is declared inside the class with the 'friend' keyword to enable specific external functions or operator overloads to access internal class data without making those members public.",
+    "category": "object_oriented_programming",
+    "expected_route": "local"
+  },
+  {
+    "question": "What is the difference between Static and Dynamic Polymorphism?",
+    "ground_truth": "Static polymorphism (compile-time) is achieved through function overloading, operator overloading, and templates, where function calls are resolved at compile time (early binding). Dynamic polymorphism (run-time) is achieved through inheritance and virtual functions, where the function to execute is resolved dynamically at runtime (late binding via vtables).",
+    "category": "object_oriented_programming",
+    "expected_route": "local"
+  },
+  {
+    "question": "What are Static Members in a C++ class and how do they behave?",
+    "ground_truth": "A static data member belongs to the class itself rather than any individual object instance. Only a single copy of a static member exists in memory shared across all instances of the class, and static member functions can be called without creating an object and can only access static members.",
+    "category": "object_oriented_programming",
+    "expected_route": "local"
+  },
+  {
+    "question": "What are the four fundamental pillars of Object-Oriented Programming?",
+    "ground_truth": "The four core pillars of OOP are: 1) Encapsulation (bundling data and methods operating on that data within a class), 2) Data Abstraction (hiding implementation details and exposing essential interfaces), 3) Inheritance (hierarchical reuse and extension of class properties), and 4) Polymorphism (allowing entities to take multiple forms through overloading and overriding).",
+    "category": "object_oriented_programming",
+    "expected_route": "local"
+  },
+  {
+    "question": "What are the restrictions when overloading the assignment operator (=) in C++?",
+    "ground_truth": "The assignment operator (=) must be implemented as a non-static member function of the class and is not inherited by derived classes. If not explicitly defined, the compiler generates a default assignment operator that performs a member-wise shallow copy.",
+    "category": "object_oriented_programming",
+    "expected_route": "local"
+  },
+  {
+    "question": "How does encapsulation in OOP compare to layering in computer network architectures?",
+    "ground_truth": "Both encapsulation in OOP and layering in network models (OSI/TCP-IP) enforce information hiding and modularity. In OOP, private data is hidden behind public methods; in network architectures, each layer encapsulates lower-level protocols, exposing only service interfaces to adjacent layers so internal implementation changes do not break other layers.",
+    "category": "cross_domain",
+    "expected_route": "local"
+  },
+  {
+    "question": "Explain how network socket APIs represent an abstraction of transport protocols.",
+    "ground_truth": "A socket acts as an object-oriented programming abstraction and communication endpoint for network I/O. It hides the underlying complexities of transport protocols (such as TCP handshakes, sliding window buffers, and packet retransmission) behind standard read, write, send, and recv system call interfaces.",
+    "category": "cross_domain",
+    "expected_route": "local"
+  },
+  {
+    "question": "What mechanisms prevent resource exhaustion in concurrent system programming and network transmission?",
+    "ground_truth": "Resource exhaustion is prevented through flow control and rate limiting (such as the Leaky Bucket algorithm and TCP sliding windows in networks) and concurrency control patterns (such as thread pools, mutexes, and RAII object lifetime management in OOP).",
+    "category": "cross_domain",
+    "expected_route": "local"
+  },
+  {
+    "question": "What is the Raft consensus algorithm and how does it achieve leader election?",
+    "ground_truth": "Raft is a distributed consensus algorithm designed for understandability. It achieves leader election using randomized election timers where candidate nodes request votes from peers, requiring a majority quorum to transition to the leader state and manage log replication.",
+    "category": "out_of_domain",
+    "expected_route": "web_search"
+  },
+  {
+    "question": "What is the primary architectural difference between Google Gemini and OpenAI GPT-4o?",
+    "ground_truth": "Google Gemini is built natively as an end-to-end multimodal architecture across text, audio, image, and video with long-context windows (up to 2 million tokens in Gemini 1.5 Pro). OpenAI GPT-4o is an omni model natively processing text, audio, and vision with real-time response speeds and conversational speech-to-speech capabilities.",
+    "category": "out_of_domain",
+    "expected_route": "web_search"
+  },
+  {
+    "question": "What is Quantum Key Distribution (QKD) and how does the BB84 protocol secure communications?",
+    "ground_truth": "Quantum Key Distribution (QKD) uses quantum mechanics principles to securely exchange cryptographic keys. The BB84 protocol uses polarized photons across non-orthogonal bases; any eavesdropping attempt disturbs quantum states and introduces measurable errors, revealing interception before secrets are shared.",
+    "category": "out_of_domain",
+    "expected_route": "web_search"
+  }
+]

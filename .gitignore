@@ -1,0 +1,121 @@
+# ═══════════════════════════════════════════════════════════
+# Agentic-CRAG .gitignore
+# ═══════════════════════════════════════════════════════════
+
+# ── Environment & Secrets ──
+.env
+.env.*
+!.env.example
+
+# ── Python bytecode & packaging ──
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+sdist/
+wheels/
+*.whl
+pip-wheel-metadata/
+*.manifest
+*.spec
+MANIFEST
+
+# ── Virtual Environments ──
+venv/
+.venv/
+env/
+ENV/
+.python-version
+
+# ── Type Checking & Linting ──
+.mypy_cache/
+.pytype/
+.pyre/
+.ruff_cache/
+
+# ── Testing & Coverage ──
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+.nox/
+.tox/
+
+# ── IDE & Editor ──
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+*.code-workspace
+
+# ── OS Files ──
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ── Data — raw documents (keep folder structure) ──
+data/raw/*.pdf
+data/raw/*.docx
+data/raw/*.txt
+data/raw/*.md
+data/raw/*.csv
+!data/raw/.gitkeep
+
+# ── Data — generated indices & artefacts ──
+data/bm25_index.pkl
+data/bm25_corpus.json
+data/chroma/
+data/*.pkl
+data/*.json
+!data/eval_dataset.json
+
+# ── Qdrant local storage ──
+qdrant_storage/
+qdrant_data/
+
+# ── Docker ──
+*.log
+docker-compose.override.yml
+
+# ── Jupyter Notebooks ──
+.ipynb_checkpoints/
+*.ipynb_meta
+
+# ── Model artefacts & caches ──
+*.pt
+*.bin
+*.onnx
+*.safetensors
+models/
+.cache/
+huggingface/
+
+# ── Misc ──
+*.bak
+*.tmp
+*.temp
+*.orig
+.gemini/
+
+# ── Local Interview / Study Notes ──
+interview/
+

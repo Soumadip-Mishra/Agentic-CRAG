@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=69.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-crag"
+version = "0.1.0"
+description = "Agentic Corrective RAG system"
+authors = [{ name = "Soumadip Mishra" }]
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+include = ["src*", "config*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
